@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<link href="../css/index_css.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="shortcut icon" href="../image/favicon.ico" />
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+/*登录页*/
+#container{height:650px; width:100%; background:#194661; margin:0 auto; padding-top:86px;}
+.container_in{ height:434px; width:942px; background:#194661; margin:0 auto;}
+.container_in_l{background:#163b52; height:384px; width:618px; float:left;}
+.container_in_l_l{width:306px; height:385px; float:left; padding-left:16px;}
+.container_in_l_r{ background:url(../image/container_l_r.jpg) no-repeat; float:left; width:310px; height:384px; padding-left:16px; padding-right:22px;}
+.container_in_r{height:388px; width:309px; margin-left:15px; background:#163b52; float:left; padding-left:16px; padding-top:19px;}
+.btn-primary:hover{color:#fff;background-color:#52a3ce;border-color:#204d74}
+.lostpassword{margin:0 auto; width:1031px; height:40px; border-bottom:#1a364e 2px solid; padding-left:45px; font-size:12px;}
+.lostpassword a{color:#c6d4df;}					.lostpassword a:hover{text-decoration:none; color:#66c0f4;}
+</style>
+
+<body>
+<!--标题栏-->
+<div id="globe_header">
+  <div class="content"> 	    
+    <div class="logo"> <span class="logo_holder"> <a href="http://store.steampowered.com/"> <img src="../image/globalheader_logo.png" width="176" height="44" /> </a> </span> </div>
+    <div class="supernav_cotainer"> <span style="position:relative"> <a href="http://store.steampowered.com/"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_show()" onmouseout="shop_hide()" >商店</a>
+      <ul  onmouseout="shop_hide()" onmouseover="shop_show()"  id="top_shop" class="dropdown-menu" style="position:absolute; left:-5px; background:#171a21;" >
+        <li><a href="#" style="color: #999;">精选</a></li>
+        <li><a href="#" style="color:#999;">探索</a></li>
+        <li><a href="#" style="color:#999;">愿望单</a></li>
+      </ul>
+      </span> <span style="position:relative"> <a href="http://store.steampowered.com/"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="socity_show()"  onmouseout="socity_hide()"  >社区</a>
+      <ul  onmouseover="socity_show()"  onmouseout="socity_hide()"  id="top_socity" class="dropdown-menu" style="position:absolute; background:#171a21;">
+        <li><a href="#" style="color: #999;">主页</a></li>
+        <li><a href="#" style="color:#999;">讨论</a></li>
+        <li><a href="#" style="color:#999;">创意工坊</a></li>
+      </ul>
+      </span> <a href="#">关于</a> <a href="#">客服</a> </div>
+    <div id="globe_actions">
+      <div  class="anzhuang" > <a href="https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe">安装Steam</a> </div>
+      <div class="login"> <span><a href="login.html">登录</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <span style="position:relative"> <a href="http://store.steampowered.com/"  class="dropdown-toggle" 					data-toggle="dropdown" >语言<span class="caret"></span></a>
+        <ul class="dropdown-menu" style="position:absolute; background:#171a21;">
+          <li><a href="#" style="color: #999;">中文</a></li>
+          <li><a href="#" style="color:#999;">English</a></li>
+          <li><a href="#" style="color:#999;">日本语</a></li>
+        </ul>
+        </span>
+      </div>
+     
+    </div>
+    <div id="username_in" style="display: none;color: #c6d4df; " ></div>
+    <!--搜索框-->
+    
+    <div class="search_nav" >
+      <div class="dropdown" style="float:left;">
+     	<button  class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd; position:relative;" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_shop_show()" onmouseout="search_shop_none()">您的商店 <span class="caret"></span></button>
+        <ul  onmouseover="search_shop_show()" onmouseout="search_shop_none()"  id="myshop" class="dropdown-menu" role="menu" aria-labelledby="menu1" >
+          
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">商店主页</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近查看过的</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">steam鉴赏家</a></li>
+          
+          
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近更新</a></li>
+        </ul>
+      </div>
+      
+      <div class="dropdown" style="float:left">
+        <button class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_game_show()" onmouseout="search_game_none()" >游戏  <span class="caret"></span></button>
+        
+        <ul  onmouseover="search_game_show()" onmouseout="search_game_none()" class="dropdown-menu" role="menu" aria-labelledby="menu1" id="mygame">
+          
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">免费游玩</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">抢先体验</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">试玩</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation" class="dropdown-header" style=" color:#2569F8">按类型浏览</li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">休闲</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">体育</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">冒险</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">动作</a></li>
+        </ul>
+      </div>
+      
+          <div class="dropdown" style="float:left;">
+        <button  class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_soft_show()" onmouseout="search_soft_none()">软件 <span class="caret"></span></button>
+        <ul onmouseover="search_soft_show()" onmouseout="search_soft_none()" id="mysoft" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+          
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">软件中心</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">动画制作与建模</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">实用工具</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">教育</a></li>
+          
+        </ul>
+      </div>
+      
+          <div class="dropdown" style="float:left;">
+        <button  class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_hardware_show()" onmouseout="search_hardware_none()">硬件 <span class="caret"></span></button>
+        <ul onmouseover="search_hardware_show()" onmouseout="search_hardware_none()" id="myhardware"  class="dropdown-menu" role="menu" aria-labelledby="menu1">
+         
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Steam 控制器</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Steam 流式盒</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Steam 主机</a></li>
+          
+
+        </ul>
+      </div>
+      
+      
+          <div class="dropdown" style="float:left;">
+        <button  class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_video_show()" onmouseout="search_video_none()" >视频 <span class="caret"></span></button>
+        <ul id="myvideo" onmouseover="search_video_show()" onmouseout="search_video_none()" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+          
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">视频中心</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation" class="dropdown-header" style=" color:#2569F8"> 按类型浏览：</li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">电影</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">章节式</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">纪录片</a></li>
+        </ul>
+      </div>
+      
+      
+          <div class="dropdown" style="float:left;">
+        <button  class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown">新闻</button>
+        
+      </div>
+      <div class="search_bar">
+		<input id="search_bar"  name="" type="text"  placeholder="搜索商店"  onfocus="xieti()"  onmouseout="zhengti()" />
+      <a href="#"><img style=" border-radius:3px; position: absolute; right: 6px; top: 5px;" src="../image/search.jpg" width="25" height="25" /></a></div>
+    </div>
+  </div>
+</div>
+
+<!--登录页面-->
+
+<div id="container">
+	<div class="container_in">
+		<div class="container_in_l">
+        	<div class="container_in_l_l">
+            	<h3 style="color:#39b7ea; font-family:Arial, Helvetica, sans-serif'">登录</h3>
+                <p style="color:#c6d4df">到现有的账户</p>
+                <!--登录文本框-->
+                <form role="form">
+					<div class="form-group">
+						<label for="name" style=" color:#c6d4df; font-size:12px; font-family:Arial, Helvetica, sans-serif;font-weight:normal";>Steam账户名称</label>
+						<input type="text" class="form-control" id="name" placeholder="" value="" style="background-color:rgba( 0, 0, 0, 0.2 ); color:#fff; width:275px; height:30px;box-shadow:1px 1px 0px #45556c; border:#000 1px;">
+					</div>
+                    <div class="form-group">
+						<label for="name" style=" color:#c6d4df; font-size:12px; font-family:Arial, Helvetica, sans-serif;font-weight:normal">密码</label>
+						<input type="password" class="form-control" id="password_in" placeholder="" value="" style="background-color:rgba( 0, 0, 0, 0.2 ); color:#fff; width:275px; height:30px;box-shadow:1px 1px 0px #45556c; border:#000 1px;">
+					</div>
+                </form>
+					<!--<label style="color:#c6d4df; font-size:12px;"><input type="checkbox"> 在这台电脑上记住我</label>-->
+                <br />
+                <button type="button" class="btn btn-primary" id="login_button_1" onclick="login_con()" onmouseover="login_bg_1()" onmouseout="login_back_1()" style=" color:#67c1f5; background-color:#24546f; border-color:#24546f">登录</button>
+            </div>
+            <div class="container_in_l_r">
+            	<h3 style="color:#39b7ea; font-family:Arial, Helvetica, sans-serif'">创建</h3>
+                <p style="color:#c6d4df">一个新的免费账户</p>
+                <p style=" color:#c6d4df; font-size:12px; font-family:Arial, Helvetica, sans-serif;font-weight:normal">欢迎免费加入及轻松使用。继续创建 Steam 帐户并获取 Steam - 适合 PC 和 Mac 玩家的前沿数字解决方案。</p>
+                <br /><br /><br /><br />
+                <button type="button" class="btn btn-primary" id="login_button_2" onmouseover="login_bg_2()" onmouseout="login_back_2()" style=" color:#67c1f5; background-color:#24546f; border-color:#24546f; margin-top:14px;">加入 Steam</button>
+            </div>
+        </div>
+    	<div class="container_in_r">
+        	<h4 style="color:#39b7ea; font-family:Arial, Helvetica, sans-serif'; padding-top:">为什么加入 STEAM?</h4>
+            <ul style="list-style-type:none; color:#c6d4df; font-size:13px; line-height:20px;">
+            	<li><img src="../image/point.jpg" width="4" height="4" />&nbsp;&nbsp;购买和下载完整零售游戏</li>
+                <li><img src="../image/point.jpg" width="4" height="4" />&nbsp;&nbsp;加入Steam社区</li>
+                <li><img src="../image/point.jpg" width="4" height="4" />&nbsp;&nbsp;游戏时与好友聊天</li>
+                <li><img src="../image/point.jpg" width="4" height="4" />&nbsp;&nbsp;在任何电脑上都能玩</li>
+                <li><img src="../image/point.jpg" width="4" height="4" />&nbsp;&nbsp;安排游戏、比赛或LAN聚会</li>
+                <li><img src="../image/point.jpg" width="4" height="4" />&nbsp;&nbsp;获取自动游戏更新以及更多！</li>
+            </ul>
+        <img src="../image/why_join_preview.png" width="265" height="176" />
+        </div>
+    </div>
+    <div class="lostpassword">
+    <a href="#">忘记您的密码？</a>
+    <a href="#" style="margin-left:545px;">了解更多 Steam的相关信息</a>
+    </div>
+</div>
+
+<script>
+	function login_con(){
+		var a=document.getElementById("name");
+		var b=document.getElementById("password_in");
+		var c=document.getElementById("globe_actions")
+		var d=document.getElementById("username_in")
+		var f=true;
+		
+		if(a.value==""){
+			alert("请先输入用户名")
+			f=false
+			return
+		}
+	  else if(b.value==""){
+			alert("请输入登录密码")
+			f=false
+			return
+		}
+	  
+	  if(f=true){
+	  	
+	  	c.style.display="none"
+	  	d.style.display="block"
+	  	d.innerText="欢迎： "+a.value;
+
+	  }
+
+
+
+	}
+	
+</script>
+
+
+
+
+<!--底部-->
+<div class="bottom">
+    
+<div class="bottom_in">
+<div style="float:left">
+    	<div class="supernav_cotainer_b"> <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_sho()" onmouseout="shop_hid()" >商品类型</a>
+      <ul  onmouseout="shop_hid()" onmouseover="shop_sho()"  id="top_sho"  style="position:absolute; display:none;" >
+        <li>血腥</li>
+        <li>暴力</li>
+        <li>电影</li>
+        <li>裸露</li>
+
+      </ul>
+      </span> <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="socity_sho_d()"  onmouseout="socity_hid_d()"  >关于 steam</a>
+      <ul  onmouseover="socity_sho_d()"  onmouseout="socity_hid_d()"  id="top_socit_d" style="display:none;position:absolute;">
+        <li>什么是 Steam</li>
+        <li>在 Steam 上送礼</li>
+        <li>Steam 社区</li>
+      </ul>
+      <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_sho_a()" onmouseout="shop_hid_a()" >关于 VALVE</a>
+      <ul  onmouseout="shop_hid_a()" onmouseover="shop_sho_a()"  id="top_sho_a"  style="display:none;position:absolute;" >
+        <li>关于 Valve</li>
+        <li>商业解决方案</li>
+        <li>Steanworks</li>
+        <li>工作</li>
+
+      </ul>
+      <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_sho_b()" onmouseout="shop_hid_b()" >帮助</a>
+      <ul  onmouseout="shop_hid_b()" onmouseover="shop_sho_b()"  id="top_sho_b"  style="display:none;position:absolute;" >
+        <li>客服</li>
+        <li>论坛</li>
+        <li>统计</li>
+
+      </ul>
+      <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_sho_c()" onmouseout="shop_hid_c()" >动态信息</a>
+      <ul  onmouseout="shop_hid_c()" onmouseover="shop_sho_c()"  id="top_sho_c"  style=" display:none;position:absolute;" >
+        <li>Steam 新闻</li>
+        <li>游戏发布</li>
+        <li>每日特惠</li>
+      </ul>
+
+     
+      </div>
+         <div class="bottom_word">
+        <img style="float:left" src="../image/btm_w.jpg" width="101" height="28" /> 
+        <p>©2017 Valve Corporation。保留所有权利。所有商标均为其在美国及其它国家/地区的各自持有者所有。<br />
+所有的价格均已包含增值税（如适用）。   隐私政策   |   法律信息   |   Steam 订户协议   |   退款</p>
+	
+    <div style="clear:both"></div>
+    <p>关于 Valve   |  Steamworks   |  工作   |  Steam 分销   |  礼物卡   |   Steam   |   @steam_games</p>
+        </div>      </div>
+<img style="float:left; margin-top:50px;" src="../image/logo_steam_footer.png" width="92" height="26" />  </div> 
+</div>
+
+</body>
+<script>
+	function shop_show(){
+		var a=document.getElementById("top_shop")
+		a.style.display="block";	
+		
+	}
+	function shop_hide(){
+		var a=document.getElementById("top_shop")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_show(){
+		var a=document.getElementById("top_socity")
+		a.style.display="block";	
+		
+	}
+		function socity_hide(){
+		var a=document.getElementById("top_socity")
+		a.style.display="none";	
+		
+	}
+	function xieti(){
+		var a=document.getElementById("search_bar")
+		a.style.fontStyle="normal"	
+		
+	}
+	function zhengti(){
+		var a=document.getElementById("search_bar")
+		a.style.fontStyle="italic"	
+		
+	}
+	function search_shop_show(){
+		var a=document.getElementById("myshop");
+		a.style.display = "block"; 
+		
+	}
+	
+	
+	
+	function search_shop_none(){
+		var a=document.getElementById("myshop");
+		a.style.display = "none"; 
+		
+	}
+	
+		function search_game_show(){
+		var a=document.getElementById("mygame");
+		a.style.display = "block"; 
+		
+	}
+	
+	
+	
+	function search_game_none(){
+		var a=document.getElementById("mygame");
+		a.style.display = "none"; 
+		
+	}
+	
+	
+		function search_soft_show(){
+		var a=document.getElementById("mysoft");
+		a.style.display = "block"; 
+		
+	}
+	
+	
+	
+	function search_soft_none(){
+		var a=document.getElementById("mysoft");
+		a.style.display = "none"; 
+		
+	}
+
+
+
+	function search_hardware_show(){
+		var a=document.getElementById("myhardware");
+		a.style.display = "block"; 
+		
+	}
+	
+	
+	
+	function search_video_none(){
+		var a=document.getElementById("myvideo");
+		a.style.display = "none"; 
+		
+	}
+	
+		function search_video_show(){
+		var a=document.getElementById("myvideo");
+		a.style.display = "block"; 
+		
+	}
+	
+	
+	
+	function search_hardware_none(){
+		var a=document.getElementById("myhardware");
+		a.style.display = "none"; 
+		
+	}
+	
+<!--	登录按钮-->
+	function login_bg_1(){
+		var a=document.getElementById("login_button_1")
+		a.style.backgroundColor="#5fb7e9"	
+		a.style.color="#fff"
+		
+	}
+	function login_back_1(){
+		var a=document.getElementById("login_button_1")
+		a.style.backgroundColor="#255470"	
+		a.style.color="#67c1f5"
+		
+	}
+	function login_bg_2(){
+		var a=document.getElementById("login_button_2")
+		a.style.backgroundColor="#5fb7e9"	
+		a.style.color="#fff"
+		
+	}
+	function login_back_2(){
+		var a=document.getElementById("login_button_2")
+		a.style.backgroundColor="#255470"	
+		a.style.color="#67c1f5"
+		
+	}
+	function shop_sho(){
+		var a=document.getElementById("top_sho")
+		a.style.display="block";	
+		
+	}
+	function shop_hid(){
+		var a=document.getElementById("top_sho")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho(){
+		var a=document.getElementById("top_socit")
+		a.style.display="block";	
+		
+	}
+		function socity_hid(){
+		var a=document.getElementById("top_socit")
+		a.style.display="none";	
+		
+	}
+	
+		
+	function shop_sho_a(){
+		var a=document.getElementById("top_sho_a")
+		a.style.display="block";	
+		
+	}
+	function shop_hid_a(){
+		var a=document.getElementById("top_sho_a")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho_a(){
+		var a=document.getElementById("top_socit_a")
+		a.style.display="block";	
+		
+	}
+		function socity_hid_a(){
+		var a=document.getElementById("top_socit_a")
+		a.style.display="none";	
+		
+	}
+	
+		
+	
+	function shop_sho_b(){
+		var a=document.getElementById("top_sho_b")
+		a.style.display="block";	
+		
+	}
+	function shop_hid_b(){
+		var a=document.getElementById("top_sho_b")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho_b(){
+		var a=document.getElementById("top_socit_b")
+		a.style.display="block";	
+		
+	}
+		function socity_hid_b(){
+		var a=document.getElementById("top_socit_b")
+		a.style.display="none";	
+		
+	}
+	
+		
+	
+	function shop_sho_c(){
+		var a=document.getElementById("top_sho_c")
+		a.style.display="block";	
+		
+	}
+	function shop_hid_c(){
+		var a=document.getElementById("top_sho_c")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho_c(){
+		var a=document.getElementById("top_socit_c")
+		a.style.display="block";	
+		
+	}
+		function socity_hid_c(){
+		var a=document.getElementById("top_socit_c")
+		a.style.display="none";	
+		
+	}
+	
+		
+	
+	function shop_sho_d(){
+		var a=document.getElementById("top_sho_d")
+		a.style.display="block";	
+		
+	}
+	function shop_hid_d(){
+		var a=document.getElementById("top_sho_d")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho_d(){
+		var a=document.getElementById("top_socit_d")
+		a.style.display="block";	
+		
+	}
+		function socity_hid_d(){
+		var a=document.getElementById("top_socit_d")
+		a.style.display="none";	
+		
+	}
+
+	
+</script>
+</html>

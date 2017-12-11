@@ -1,0 +1,1886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>欢迎来到Steam</title>
+		<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+		<link href="../css/index_css.css" rel="stylesheet" type="text/css" />
+		 
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../js/swiper-3.4.2.min.css" />
+		<script src="../js/swiper-3.4.2.min.js"></script>
+	</head>
+
+	<body>
+		<div id="globe_header">
+			<div class="content">
+
+				<!--标题栏-->
+
+				<div class="logo"> <span class="logo_holder"> <a href="http://store.steampowered.com/"> <img src="../image/globalheader_logo.png" width="176" height="44" /> </a> </span> </div>
+				<div class="supernav_cotainer"> <span style="position:relative"> <a href="http://store.steampowered.com/"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_show()" onmouseout="shop_hide()" >商店</a>
+      <ul  onmouseout="shop_hide()" onmouseover="shop_show()"  id="top_shop" class="dropdown-menu" style="position:absolute; left:-5px; top:15px; background:#171a21;" >
+        <li><a href="#" style="color: #999;">精选</a></li>
+        <li><a href="#" style="color:#999;">探索</a></li>
+        <li><a href="#" style="color:#999;">愿望单</a></li>
+      </ul>
+      </span> <span style="position:relative"> <a href="http://store.steampowered.com/"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="socity_show()"  onmouseout="socity_hide()"  >社区</a>
+      <ul  onmouseover="socity_show()"  onmouseout="socity_hide()"  id="top_socity" class="dropdown-menu" style="position:absolute;left:-5px;   top:15px; background:#171a21;">
+        <li><a href="#" style="color: #999;">主页</a></li>
+        <li><a href="#" style="color:#999;">讨论</a></li>
+        <li><a href="#" style="color:#999;">创意工坊</a></li>
+      </ul>
+      </span>
+					<a href="#">关于</a>
+					<a href="window.close()">客服</a>
+				</div>
+				<div id="globe_actions">
+					<div class="anzhuang">
+						<a href="https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe">安装Steam</a>
+					</div>
+					<div class="login"> <span><a href="login.html">登录</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <span style="position:relative"> <a href="#"  class="dropdown-toggle" 	data-toggle="dropdown" onclick="language_show()"   onmouseout="language_hide()"  >语言
+      	<span class="caret"></span></a>
+						<ul id="language" class="dropdown-menu" style="position:absolute; top: 11px; background:#171a21;" onmouseout="language_hide()" onmouseover="language_show()">
+							<li>
+								<a href="#" style="color: #999;">中文</a>
+							</li>
+							<li>
+								<a href="#" style="color:#999;">English</a>
+							</li>
+							<li>
+								<a href="#" style="color:#999;">日本语</a>
+							</li>
+						</ul>
+						</span>
+					</div>
+				</div>
+
+				<!--搜索框-->
+
+				<div class="search_nav">
+					<div class="dropdown" style="float:left;">
+						<button class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd; position:relative;" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_shop_show()" onmouseout="search_shop_none()">您的商店 <span class="caret"></span></button>
+						<ul onmouseover="search_shop_show()" onmouseout="search_shop_none()" id="myshop" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">商店主页</a>
+							</li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">最近查看过的</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">steam鉴赏家</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">最近更新</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dropdown" style="float:left">
+						<button class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_game_show()" onmouseout="search_game_none()">游戏 <span class="caret"></span></button>
+						<ul onmouseover="search_game_show()" onmouseout="search_game_none()" class="dropdown-menu" role="menu" aria-labelledby="menu1" id="mygame">
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">免费游玩</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">抢先体验</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">试玩</a>
+							</li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation" class="dropdown-header" style=" color:#2569F8">按类型浏览</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">休闲</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">体育</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">冒险</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">动作</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dropdown" style="float:left;">
+						<button class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_soft_show()" onmouseout="search_soft_none()">软件 <span class="caret"></span></button>
+						<ul onmouseover="search_soft_show()" onmouseout="search_soft_none()" id="mysoft" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">软件中心</a>
+							</li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">动画制作与建模</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">实用工具</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">教育</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dropdown" style="float:left;">
+						<button class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_hardware_show()" onmouseout="search_hardware_none()">硬件 <span class="caret"></span></button>
+						<ul onmouseover="search_hardware_show()" onmouseout="search_hardware_none()" id="myhardware" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">Steam 控制器</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">Steam 流式盒</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">Steam 主机</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dropdown" style="float:left;">
+						<button class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown" onmouseover="search_video_show()" onmouseout="search_video_none()">视频 <span class="caret"></span></button>
+						<ul id="myvideo" onmouseover="search_video_show()" onmouseout="search_video_none()" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">视频中心</a>
+							</li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation" class="dropdown-header" style=" color:#2569F8"> 按类型浏览：</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">电影</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">章节式</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">纪录片</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dropdown" style="float:left;">
+						<button class="btn btn-default dropdown-toggle" style="background:rgb(55, 112, 150); border:none; color: #FFF;font-size:13px; line-height:23px; border-radius:0; border-right:1px solid rgb(43, 85, 113); color:#d9dadd" type="button" id="menu1" data-toggle="dropdown">新闻</button>
+					</div>
+					<div class="search_bar">
+						<input id="search_bar" name="" type="text" placeholder="搜索商店" onfocus="xieti()" onmouseout="zhengti()" />
+						<a href="#"><img style=" border-radius:3px; position: absolute; right: 6px; top: 5px;" src="../image/search.jpg" width="25" height="25" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cir"></div>
+
+		<!--
+	顶部导航栏结束   身体部分开始
+-->
+		<div id="home_page">
+			<div id="lunbotu">
+
+				<div class="jingxuan">精选和推荐</div>
+				<!--轮播图组 -->
+				<div class="swiper-container" id="swiper-container-first">
+					<!--轮播图1-->
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="lunbotu_left">
+								<a href="#"><img id="h1z1_pic" src="../image/h1z1/h1z1(4).jpg" width="616" height="353" /></a>
+							</div>
+							<div class="lunbotu_right">
+								<div class="lunbotu_right_top">H1Z1</div>
+								<div class="lunbotu_right_middle">
+									<img src="../image/h1z1/h1z1(1).jpg" width="142" height="69" onmouseover="h1z1_pic1()" />
+									<img src="../image/h1z1/h1z1(2).jpg" width="142" height="69" onmouseover="h1z1_pic2()" />
+									<img src="../image/h1z1/h1z1(3).jpg" width="142" height="69" onmouseover="h1z1_pic3()" />
+									<img src="../image/h1z1/h1z1(4).jpg" width="142" height="69" onmouseover="h1z1_pic4()" />
+								</div>
+								<div class="now_out">现已推出抢先体验</div>
+								<div class="hot">
+									<div class="hot_tag">热销商品</div>
+								</div>
+								<div class="lunbotu_right_bottom">
+									<div class="lunbotu_right_bottom_price">￥68</div>
+									<div class="lunbotu_right_bottom_icon"></div>
+								</div>
+							</div>
+						</div>
+						<!--轮播图2-->
+						<div class="swiper-slide">
+							<div class="lunbotu_left">
+								<a href="#"><img id="lc_pic" src="../image/lost castle/lc4.jpg" width="616" height="353" /></a>
+							</div>
+							<div class="lunbotu_right">
+								<div class="lunbotu_right_top">Lost Castle</div>
+								<div class="lunbotu_right_middle">
+									<img src="../image/lost castle/lc4.jpg" width="142" height="69" onmouseover="lc_pic4()" />
+									<img src="../image/lost castle/lc3.jpg" width="142" height="69" onmouseover="lc_pic3()" />
+									<img src="../image/lost castle/lc2.jpg" width="142" height="69" onmouseover="lc_pic2()" />
+									<img src="../image/lost castle/lc1.jpg" width="142" height="69" onmouseover="lc_pic1()" /> </div>
+								<div class="now_out">现已推出</div>
+								<div class="hot">
+									<div class="hot_tag">热销商品</div>
+								</div>
+								<div class="lunbotu_right_bottom">
+									<div class="lunbotu_right_bottom_price">￥33</div>
+									<div class="lunbotu_right_bottom_icon"></div>
+								</div>
+							</div>
+
+						</div>
+						<!--轮播图3-->
+						<div class="swiper-slide">
+							<div class="lunbotu_left">
+								<a href="#"><img id="dc_pic" src="../image/death coming/dc1.jpg" width="616" height="353" /></a>
+							</div>
+							<div class="lunbotu_right">
+								<div class="lunbotu_right_top">Death Coming</div>
+								<div class="lunbotu_right_middle">
+									<img src="../image/death coming/dc1.jpg" width="142" height="69" onmouseover="dc_pic1()" />
+									<img src="../image/death coming/dc4.jpg" width="142" height="69" onmouseover="dc_pic4()" />
+									<img src="../image/death coming/dc3.jpg" width="142" height="69" onmouseover="dc_pic3()" />
+									<img src="../image/death coming/dc2.jpg" width="142" height="69" onmouseover="dc_pic2()" />
+								</div>
+								<div class="now_out">现已推出</div>
+								<div class="hot">
+									<div class="hot_tag">热销商品</div>
+								</div>
+								<div class="lunbotu_right_bottom">
+									<div class="lunbotu_right_bottom_price">￥28</div>
+									<div class="lunbotu_right_bottom_icon"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 如果需要分页器 -->
+					<div class="swiper-pagination"></div>
+
+					<!-- 如果需要导航按钮 -->
+					<div class="swiper-button-prev  swiper-button-white"></div>
+					<div class="swiper-button-next  swiper-button-white"></div>
+				</div>
+
+				<!--左侧栏-->
+				<div class="left_tag">
+					<div class="steam_card">
+						<img src="../欢迎来到 Steam_files/steamcards_promo.png" alt="" width="213px" height="119px" />
+					</div>
+					<div class="steam_tag">
+						<ul>
+							<li class="left_title">礼物卡</li>
+							<li class="left_page">
+								<a href="#">现已在steam上推出</a>
+							</li>
+						</ul>
+						<ul>
+							<li class="left_title">推荐</li>
+							<li class="left_page">
+								<a href="#">由好友推荐</a>
+							</li>
+							<li class="left_page">
+								<a href="#">由鉴赏家推荐</a>
+							</li>
+							<li class="left_page">
+								<a href="#">标签</a>
+							</li>
+						</ul>
+						<ul>
+							<li class="left_title">探索队列</li>
+							<li class="left_page">
+								<a href="#">推荐</a>
+							</li>
+							<li class="left_page">
+								<a href="#">新品</a>
+							</li>
+						</ul>
+						<ul>
+							<li class="left_title">浏览分类</li>
+							<li class="left_page">
+								<a href="#">热销商品</a>
+							</li>
+							<li class="left_page">
+								<a href="#">最近更新</a>
+							</li>
+							<li class="left_page">
+								<a href="#">新品</a>
+							</li>
+							<li class="left_page">
+								<a href="#">即将推出</a>
+							</li>
+							<li class="left_page">
+								<a href="#">优惠</a>
+							</li>
+							<li class="left_page">
+								<a href="#">虚拟现实</a>
+							</li>
+							<li class="left_page">
+								<a href="#">可支持steam控制器</a>
+							</li>
+						</ul>
+						<ul>
+							<li class="left_title">按类型浏览</li>
+							<li class="left_page">
+								<a href="#">免费游玩</a>
+							</li>
+							<li class="left_page">
+								<a href="#">抢先体验</a>
+							</li>
+							<li class="left_page">
+								<a href="#">休闲</a>
+							</li>
+							<li class="left_page">
+								<a href="#">体育</a>
+							</li>
+							<li class="left_page">
+								<a href="#">冒险</a>
+							</li>
+							<li class="left_page">
+								<a href="#">动作</a>
+							</li>
+							<li class="left_page">
+								<a href="#">大型多人在线</a>
+							</li>
+							<li class="left_page">
+								<a href="#">模拟</a>
+							</li>
+							<li class="left_page">
+								<a href="#">独立</a>
+							</li>
+							<li class="left_page">
+								<a href="#">竞速</a>
+							</li>
+							<li class="left_page">
+								<a href="#">策略</a>
+							</li>
+							<li class="left_page">
+								<a href="#">角色扮演</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="lunbotu">
+					<div class="jingxuan">特别优惠
+						<div class="view_all" >
+							<a href="#">浏览所有</a>
+						</div>
+					</div>
+					<!--轮播图组 -->
+					<div class="swiper-container" id="swiper-container-second" style="height: 390px; float: left;">
+
+						<div class="swiper-wrapper">
+
+							<!--轮播图1-->
+							<div class="swiper-slide">
+								<div class="tebieyouhuizu">
+									<img src="../欢迎来到 Steam_files/header(2).jpg" alt="" width="308px;" height="143px;" />
+									<div class="price_count2"></div>
+
+								</div>
+								<div class="tebieyouhuizu">
+									<img src="../欢迎来到 Steam_files/header(3).jpg" alt="" width="308px;" height="143px;" />
+									<div class="price_count2"></div>
+								</div>
+								<div class="tebieyouhuizu">
+									<img src="../欢迎来到 Steam_files/header(4).jpg" alt="" width="308px;" height="143px;" />
+									<div class="price_count2"></div>
+								</div>
+								<div class="tebieyouhuizu">
+									<img src="../欢迎来到 Steam_files/header(5).jpg" alt="" width="308px;" height="143px;" />
+									<div class="price_count2"></div>
+								</div>
+								<div class="tebieyouhuizu">
+									<img src="../欢迎来到 Steam_files/header(6).jpg" alt="" width="308px;" height="143px;" />
+									<div class="price_count2"></div>
+								</div>
+								<div class="tebieyouhuizu">
+									<img src="../欢迎来到 Steam_files/header(7).jpg" alt="" width="308px;" height="143px;" />
+									<div class="price_count2"></div>
+								</div>
+
+							</div>
+							<!--轮播图2-->
+							<div class="swiper-slide">
+								<div class="lunbotu2_left">
+									<img src="../image/spotlight_image_english.jpg" alt="" height="308px" width="306px" />
+									<div class="teyou">
+										<span class="tebieyouhui">特别优惠
+		        		</span><br />
+										<span class="teyoushijian">免费周末</span>
+									</div>
+									<div class="price_count"></div>
+								</div>
+								<div class="lunbotu2_left">
+									<img src="../image/spotlight_image_schinese(1).jpg" alt="" height="308px" width="306px" />
+									<div class="teyou">
+										<span class="tebieyouhui">特别优惠
+		        		</span><br />
+										<span class="teyoushijian">特惠于周一上午9点止（太平洋时间）</span>
+									</div>
+
+								</div>
+								<div class="lunbotu2_left">
+									<img src="../image/spotlight_image_schinese.jpg" alt="" height="308px" width="306px" />
+									<div class="teyou">
+										<span class="tebieyouhui">特别优惠
+		        		</span><br />
+										<span class="teyoushijian">特惠于周一上午9点止（太平洋时间）</span>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<!-- 如果需要分页器 -->
+						<div class="swiper-pagination" style="position: absolute; bottom: -20PX;"></div>
+
+						<!-- 如果需要导航按钮 -->
+						<div class="swiper-button-prev  swiper-button-white" style="position: absolute; right:16PX;  top: 193px"></div>
+						<div class="swiper-button-next  swiper-button-white" style="position: absolute; right:16PX; top: 193px"></div>
+					</div>
+
+				</div>
+			</div>
+			<div id="view_steam">
+				<div class="view_steam_in">
+					<h2>浏览 STEAM</h2>
+					<div class="view_steam_in_container">
+						<div class="view_steam_in_tag">
+							<a href="#"  class="tooltip-show" data-toggle="tooltip" title="最新上架商品">新品</a>
+						</div>
+						<div class="view_steam_in_tag">
+							<a href="#"  class="tooltip-show" data-toggle="tooltip" title="限时折扣优惠">优惠</a>
+						</div>
+						<div class="view_steam_in_tag">
+							<a href="#" style="margin-left: 80px;">免费游戏</a>
+						</div>
+						<div class="view_steam_in_tag" >
+							<a href="#" style="margin-left: 70px;">按用户标签</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+			<div id="appreciate">
+				<div class="appreciate">
+					<h2>STEAM 鉴赏家</h2>
+					<div class="view_all" >
+							<a href="#"  data-toggle="tooltip" data-placement="top" title="点击浏览最受欢迎的steam鉴赏家"  >浏览所有</a>
+					</div>
+					<div class="appreciate_content">
+						<p style="float: left; margin-top: 5px;">通过 Steam 鉴赏家探索新游戏。关注鉴赏家并查看其推荐的游戏。</p>
+						
+					</div>
+					
+					<div class="appreciate_in">
+						<div class="appreciate_tag" id="tag_bg" onfocus="tag_color()">
+							<div class="appreciate_tag_in">
+								<img src="../image/6afa58de34f5fcd3f20298ce3d3e37ba969523f5_medium.jpg" width="64px" height="64px" alt="" />
+								<span class="appreciate_tag_title">嗶哩嗶哩 - ( ゜- ゜)つロ 乾杯~</span>
+								<div class="appreciate_tag_content">独立游戏 艺术</div>
+							</div>
+						</div>
+						<div class="appreciate_tag">
+							<div class="appreciate_tag_in">
+								<img src="../image/3c43891c81b1c7d046cbbb37535291443721e105_medium.jpg" width="64px" height="64px" alt="" />
+								<span class="appreciate_tag_title">中国鉴赏家同好会</span>
+								<div class="appreciate_tag_content">无丝竹之乱耳,无案牍之劳形</div>
+							</div>
+						</div>
+						<div class="appreciate_tag" style="margin-right: none;">
+							<div class="appreciate_tag_in">
+								<img src="../image/99681a4dffa95cdfed48d556ea2ea9a4d62a3987_medium.jpg" width="64px" height="64px" alt="" />
+								<span class="appreciate_tag_title">中国玩家鉴赏组</span>
+								<div class="appreciate_tag_content">关注中国玩家鉴赏组，能为你实时推荐自你关注以来大部分大作品的游戏测评，也希望各位拥有大量游戏的中
+								</div>
+							</div>
+						</div>
+						<div class="appreciate_tag">
+							<div class="appreciate_tag_in">
+								<img src="../image/bc5eef60172aeb12bd0b32e6b253f111ffa0b672_medium.jpg" width="64px" height="64px" alt="" />
+								<span class="appreciate_tag_title">游戏特攻组</span>
+								<div class="appreciate_tag_content">欢迎大家关注我们，我们会努力做出更好的游戏评测。感谢大家的订阅~</div>
+							</div>
+						</div>
+						<div class="appreciate_tag">
+							<div class="appreciate_tag_in">
+								<img src="../image/a70c1730f497798bc2cd6bcd7f4cd3047e87b32e_medium.jpg" width="64px" height="64px" alt="" />
+								<span class="appreciate_tag_title">散人games</span>
+								<div class="appreciate_tag_content">散人games</div>
+							</div>
+						</div>
+						<div class="appreciate_tag"  style="margin-right: none;">
+							<div class="appreciate_tag_in">
+								<img src="../image/cf669720867c16b4b2a3b9fa9322311450ceb72d_medium.jpg" width="64px" height="64px" alt="" />
+								<span class="appreciate_tag_title">国人交流组【天朝】</span>
+								<div class="appreciate_tag_content">这些游戏值得一玩 !</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div id="leg">
+			<div class="leg_nav">
+				<div class="leg_nav_li">
+					<ul>
+						<li id="leg_nav_li0"  onclick=" leg_nav_li0()" onmouseover="leg_nav_colorshow0()" onmouseout="leg_nav_colorhide0()" style="width: 118px;">新品与热门商品</li>
+						<li id="leg_nav_li1"  onclick=" leg_nav_li1()" onmouseover="leg_nav_colorshow1()" onmouseout="leg_nav_colorhide1()"   style="width: 80px;">热销商品</li>
+						<li id="leg_nav_li2"  onclick=" leg_nav_li2()" onmouseover="leg_nav_colorshow2()" onmouseout="leg_nav_colorhide2()"   style="width: 80px;">即将推出</li>
+						<li id="leg_nav_li3"  onclick=" leg_nav_li3()" onmouseover="leg_nav_colorshow3()" onmouseout="leg_nav_colorhide3()"   style="width: 54px;">优惠</li>
+					</ul>
+				</div>
+				<div id="leg_nav_content1">
+					<div class="leg_nav_content1_in" onmouseover="content_inshow1()" onmouseout="content_inhide1()" id="leg_nav_content1_in">
+						<a href="detal.html"><img src="../image/end/end5.jpg" width="184px" height="69px"/></a>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">The End Is Nigh</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								动作，冒险
+							</div>
+							
+							
+							<div class="leg_nav_content1_right1" id="leg_nav_content1_right">
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">The End Is Nigh</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/end/end1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/end/end2.jpg"alt=""  width="273px" height="150px"/>
+										<img src="../image/end/end3.jpg"alt=""  width="273px" height="150px"/>
+										<img src="../image/end/end4.jpg"alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in"  onmouseover="content_inshow2()" onmouseout="content_inhide2()" id="leg_nav_content2_in">
+						<img src="../image/capsule_184x69(1).jpg" alt="" />
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Sky Force</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								动作，独立，射击
+							</div>
+							
+							<div style="position: absolute;top: -72px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content2_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Sky Force</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/sky/sky1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/sky/sky2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/sky/sky3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/sky/sky4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow3()" onmouseout="content_inhide3()" id="leg_nav_content3_in">
+						<img src="../image/capsule_184x69(2).jpg" alt="" />
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">The House Of Da Vinic</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								冒险，独立，策略
+							</div>
+							
+							<div style="position: absolute;top: -144px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content3_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">The House Of Da Vinic</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/house/house1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/house/house2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/house/house3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/house/house4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="leg_nav_content1_in" onmouseover="content_inshow4()" onmouseout="content_inhide4()" id="leg_nav_content4_in">
+						<img src="../image/capsule_184x69(3).jpg" alt="" />
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">且听琴语</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								视觉，恋爱，色情内容，裸露
+							</div>
+							
+							<div style="position: absolute;top: -216px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content4_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">且听琴语</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/gal/gal1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/gal/gal2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/gal/gal3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/gal/gal4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow5()" onmouseout="content_inhide5()" id="leg_nav_content5_in">
+						<img src="../image/capsule_184x69(4).jpg" alt="" />
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">CS2D</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								免费，动作独立，休闲
+							</div>
+							<div style="position: absolute;top: -288px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content5_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">CS2D</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/cs/cs1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cs/cs2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cs/cs3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cs/cs4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow6()" onmouseout="content_inhide6()" id="leg_nav_content6_in">
+						<img src="../image/capsule_184x69(5).jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Magical Squash</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								虚拟现实，动作，独立
+							</div>
+							
+							<div style="position: absolute;top: -360px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content6_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Magical Squash</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/mag/mag1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/mag/mag2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/mag/mag3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/mag/mag4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow7()" onmouseout="content_inhide7()" id="leg_nav_content7_in">
+						<img src="../image/capsule_184x69(6).jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Football Manager 2018</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								体育，模拟，足球
+							</div>
+							<div style="position: absolute;top: -432px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content7_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Football Manager 2018</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/foot/foot1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/foot/foot2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/foot/foot3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/foot/foot4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow8()" onmouseout="content_inhide8()" id="leg_nav_content8_in">
+						<img src="../image/capsule_184x69(7).jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Battlerite</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								多人，竞技，免费游戏
+							</div>
+							<div style="position: absolute;top: -504px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content8_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Battlerite</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/batt/batt1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/batt/batt2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/batt/batt3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/batt/batt4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow9()" onmouseout="content_inhide9()" id="leg_nav_content9_in">
+						<img src="../image/capsule_184x69(8).jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Hand of Fate 2</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								角色扮演，独立，动作，卡牌
+							</div>
+							<div style="position: absolute;top: -576px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content9_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Hand of Fate 2</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/hand/hand1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/hand/hand2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/hand/han3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/hand/hand4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow10()" onmouseout="content_inhide10()" id="leg_nav_content10_in">
+						<img src="../image/capsule_184x69.jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Crimson Imprint plus -Nonexistent Christmas-</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								裸露，独立，休闲，冒险
+							</div>
+							<div style="position: absolute;top: -648px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content10_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Crimson Imprint plus -Nonexistent Christmas-</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/cri/cri1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cri/cri2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cri/cri3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cri/cri4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="leg_nav_content2" style="display: none;">
+					<div class="leg_nav_content1_in" onmouseover="content_inshow01()" onmouseout="content_inhide01()" id="leg_nav_content01_in">
+						<img src="../image/capsule_184x69_schinese.jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">家有大猫</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								免费，视觉，恋爱
+							</div>
+							
+							
+							<div class="leg_nav_content1_right1" id="leg_nav_content01_right">
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">家有大猫</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/cat/cat1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cat/cat2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cat/cat3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cat/cat4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="leg_nav_content1_in" onmouseover="content_inshow03()" onmouseout="content_inhide03()" id="leg_nav_content03_in">
+						<img src="../image/capsule_184x69(2).jpg" alt="" />
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">The House Of Da Vinic</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								冒险，独立，策略
+							</div>
+							
+							<div style="position: absolute;top: -72px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content03_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">The House Of Da Vinic</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/house/house1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/house/house2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/house/house3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/house/house4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="leg_nav_content1_in" onmouseover="content_inshow04()" onmouseout="content_inhide04()" id="leg_nav_content04_in">
+						<img src="../image/capsule_184x69(3).jpg" alt="" />
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">且听琴语</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								视觉，恋爱，色情内容，裸露
+							</div>
+							
+							<div style="position: absolute;top: -144px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content04_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">且听琴语</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/gal/gal1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/gal/gal2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/gal/gal3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/gal/gal4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in"  onmouseover="content_inshow02()" onmouseout="content_inhide02()" id="leg_nav_content02_in">
+						<img src="../image/capsule_184x69(1).jpg" alt="" />
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Sky Force</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								动作，独立，射击
+							</div>
+							
+							<div style="position: absolute;top: -216px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content02_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Sky Force</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/sky/sky1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/sky/sky2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/sky/sky3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/sky/sky4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow06()" onmouseout="content_inhide06()" id="leg_nav_content06_in">
+						<img src="../image/capsule_184x69(5).jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Magical Squash</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								虚拟现实，动作，独立
+							</div>
+							
+							<div style="position: absolute;top: -288px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content06_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Magical Squash</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/mag/mag1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/mag/mag2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/mag/mag3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/mag/mag4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow05()" onmouseout="content_inhide05()" id="leg_nav_content05_in">
+						<img src="../image/capsule_184x69(4).jpg" alt="" />
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">CS2D</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								免费，动作独立，休闲
+							</div>
+							<div style="position: absolute;top: -360px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content05_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">CS2D</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/cs/cs1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cs/cs2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cs/cs3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cs/cs4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="leg_nav_content1_in" onmouseover="content_inshow010()" onmouseout="content_inhide010()" id="leg_nav_content010_in">
+						<img src="../image/capsule_184x69.jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Crimson Imprint plus -Nonexistent Christmas-</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								裸露，独立，休闲，冒险
+							</div>
+							<div style="position: absolute;top: -432px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content010_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Crimson Imprint plus -Nonexistent Christmas-</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/cri/cri1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cri/cri2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cri/cri3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/cri/cri4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow07()" onmouseout="content_inhide07()" id="leg_nav_content07_in">
+						<img src="../image/capsule_184x69(6).jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Football Manager 2018</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								体育，模拟，足球
+							</div>
+							<div style="position: absolute;top: -504px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content07_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Football Manager 2018</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/foot/foot1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/foot/foot2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/foot/foot3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/foot/foot4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow08()" onmouseout="content_inhide08()" id="leg_nav_content08_in">
+						<img src="../image/capsule_184x69(7).jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Battlerite</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								多人，竞技，免费游戏
+							</div>
+							<div style="position: absolute;top: -576px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content08_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Battlerite</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/batt/batt1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/batt/batt2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/batt/batt3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/batt/batt4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="leg_nav_content1_in" onmouseover="content_inshow09()" onmouseout="content_inhide09()" id="leg_nav_content09_in">
+						<img src="../image/capsule_184x69(8).jpg"/>
+						<div class="leg_nav_content1_in_txt">
+							<div class="leg_nav_content1_in_title">Hand of Fate 2</div>
+							<div class="leg_nav_content1_in_icon">
+								<img src="../image/icon_platform_win.png" alt="" />
+							</div>
+							<div class="leg_nav_content1_in_content">
+								角色扮演，独立，动作，卡牌
+							</div>
+							<div style="position: absolute;top: -648px; display: none;" class="leg_nav_content1_right1" id="leg_nav_content09_right" >
+								<div class="leg_nav_content1_right1_in">
+									<div class="leg_nav_content1_right1_in_title">Hand of Fate 2</div>
+									<div class="leg_nav_content1_right1_in_comment">
+										<div class="leg_nav_content1_right1_in_comment_title">总体用户评测</div>
+										<div class="leg_nav_content1_right1_in_comment_content">好评如潮</div>
+										<img src="../image/hand/hand1.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/hand/hand2.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/hand/han3.jpg" alt=""  width="273px" height="150px"/>
+										<img src="../image/hand/hand4.jpg" alt=""  width="273px" height="150px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="black">
+			<div class="black_in">
+				<div class="black_in_line">
+					<div class="black_in_line_box">
+						<div class="black_in_line_box_title">正在寻找推荐？</div>
+						<div class="black_in_line_box_cnt">登录以查看个性化推荐</div>
+						<div style="clear: both;"></div>
+						<div class="login_bottom"><a href="login.html">登录</a></div>
+						<div class="black_in_line_box_cnt">或者<a style="color: #FFFFFF; " href="#">注册</a>并免费加入steam</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+<!--底部-->
+<div style="clear:both"></div>
+<div class="bottom">
+    
+<div class="bottom_in">
+<div style="float:left">
+    	<div class="supernav_cotainer_b"> <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_sho()" onmouseout="shop_hid()" >商品类型</a>
+      <ul  onmouseout="shop_hid()" onmouseover="shop_sho()"  id="top_sho"  style="position:absolute; display:none;" >
+        <li>血腥</li>
+        <li>暴力</li>
+        <li>电影</li>
+        <li>裸露</li>
+
+      </ul>
+      </span> <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="socity_sho_d()"  onmouseout="socity_hid_d()"  >关于 steam</a>
+      <ul  onmouseover="socity_sho_d()"  onmouseout="socity_hid_d()"  id="top_socit_d" style="display:none;position:absolute;">
+        <li>什么是 Steam</li>
+        <li>在 Steam 上送礼</li>
+        <li>Steam 社区</li>
+      </ul>
+      <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_sho_a()" onmouseout="shop_hid_a()" >关于 VALVE</a>
+      <ul  onmouseout="shop_hid_a()" onmouseover="shop_sho_a()"  id="top_sho_a"  style="display:none;position:absolute;" >
+        <li>关于 Valve</li>
+        <li>商业解决方案</li>
+        <li>Steanworks</li>
+        <li>工作</li>
+
+      </ul>
+      <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_sho_b()" onmouseout="shop_hid_b()" >帮助</a>
+      <ul  onmouseout="shop_hid_b()" onmouseover="shop_sho_b()"  id="top_sho_b"  style="display:none;position:absolute;" >
+        <li>客服</li>
+        <li>论坛</li>
+        <li>统计</li>
+
+      </ul>
+      <span style="position:relative"> <a href="#"  class="dropdown-toggle" data-toggle="dropdown" onmouseover="shop_sho_c()" onmouseout="shop_hid_c()" >动态信息</a>
+      <ul  onmouseout="shop_hid_c()" onmouseover="shop_sho_c()"  id="top_sho_c"  style=" display:none;position:absolute;" >
+        <li>Steam 新闻</li>
+        <li>游戏发布</li>
+        <li>每日特惠</li>
+      </ul>
+
+     
+      </div>
+         <div class="bottom_word">
+        <img style="float:left" src="../image/btm_w.jpg" width="101" height="28" /> 
+        <p>©2017 Valve Corporation。保留所有权利。所有商标均为其在美国及其它国家/地区的各自持有者所有。<br />
+所有的价格均已包含增值税（如适用）。   隐私政策   |   法律信息   |   Steam 订户协议   |   退款</p>
+	
+    <div style="clear:both"></div>
+    <p>关于 Valve   |  Steamworks   |  工作   |  Steam 分销   |  礼物卡   |   Steam   |   @steam_games</p>
+        </div>      </div>
+<img style="float:left; margin-top:50px;" src="../image/logo_steam_footer.png" width="92" height="26" />  </div> 
+</div>
+	</body>
+	<script>
+	
+		function shop_show() {
+			var a = document.getElementById("top_shop")
+			a.style.display = "block";
+
+		}
+
+		function shop_hide() {
+			var a = document.getElementById("top_shop")
+			a.style.display = "none";
+
+		}
+
+		function socity_show() {
+			var a = document.getElementById("top_socity")
+			a.style.display = "block";
+
+		}
+
+		function socity_hide() {
+			var a = document.getElementById("top_socity")
+			a.style.display = "none";
+
+		}
+
+		function xieti() {
+			var a = document.getElementById("search_bar")
+			a.style.fontStyle = "normal"
+
+		}
+
+		function zhengti() {
+			var a = document.getElementById("search_bar")
+			a.style.fontStyle = "italic"
+
+		}
+
+		function search_shop_show() {
+			var a = document.getElementById("myshop");
+			a.style.display = "block";
+
+		}
+
+		function search_shop_none() {
+			var a = document.getElementById("myshop");
+			a.style.display = "none";
+
+		}
+
+		function search_game_show() {
+			var a = document.getElementById("mygame");
+			a.style.display = "block";
+
+		}
+
+		function search_game_none() {
+			var a = document.getElementById("mygame");
+			a.style.display = "none";
+
+		}
+
+		function search_soft_show() {
+			var a = document.getElementById("mysoft");
+			a.style.display = "block";
+
+		}
+
+		function search_soft_none() {
+			var a = document.getElementById("mysoft");
+			a.style.display = "none";
+
+		}
+
+		function search_hardware_show() {
+			var a = document.getElementById("myhardware");
+			a.style.display = "block";
+
+		}
+
+		function search_video_none() {
+			var a = document.getElementById("myvideo");
+			a.style.display = "none";
+
+		}
+
+		function search_video_show() {
+			var a = document.getElementById("myvideo");
+			a.style.display = "block";
+
+		}
+
+		function search_hardware_none() {
+			var a = document.getElementById("myhardware");
+			a.style.display = "none";
+		}
+
+		//language
+
+		function language_show() {
+			var a = document.getElementById("language")
+			a.style.display = "block"
+
+		}
+
+		function language_hide() {
+			var a = document.getElementById("language")
+			a.style.display = "none"
+
+		}
+
+		//轮播图js
+
+		var mySwiper = new Swiper('#swiper-container-first', {
+
+			direction: 'horizontal',
+			loop: true,
+
+			// 如果需要分页器
+			pagination: '.swiper-pagination',
+
+			// 如果需要前进后退按钮
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			paginationClickable: true,
+			autoplay: 5000,
+
+		})
+
+		var mySwiper = new Swiper('#swiper-container-second', {
+
+			direction: 'horizontal',
+			loop: true,
+			effect: 'flip',
+
+			// 如果需要分页器
+			pagination: '.swiper-pagination',
+
+			// 如果需要前进后退按钮
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			paginationClickable: true,
+
+		})
+
+		// h1z1图片js
+		function h1z1_pic1() {
+			var a = document.getElementById("h1z1_pic")
+			a.src = "../image/h1z1/h1z1(1).jpg"
+
+		}
+
+		function h1z1_pic2() {
+			var a = document.getElementById("h1z1_pic")
+			a.src = "../image/h1z1/h1z1(2).jpg"
+
+		}
+
+		function h1z1_pic3() {
+			var a = document.getElementById("h1z1_pic")
+			a.src = "../image/h1z1/h1z1(3).jpg"
+
+		}
+
+		function h1z1_pic4() {
+			var a = document.getElementById("h1z1_pic")
+			a.src = "../image/h1z1/h1z1(4).jpg"
+
+		}
+
+		// lc图片js
+
+		function lc_pic1() {
+			var a = document.getElementById("lc_pic")
+			a.src = "../image/lost castle/lc1.jpg"
+
+		}
+
+		function lc_pic2() {
+			var a = document.getElementById("lc_pic")
+			a.src = "../image/lost castle/lc2.jpg"
+
+		}
+
+		function lc_pic3() {
+			var a = document.getElementById("lc_pic")
+			a.src = "../image/lost castle/lc3.jpg"
+
+		}
+
+		function lc_pic4() {
+			var a = document.getElementById("lc_pic")
+			a.src = "../image/lost castle/lc4.jpg"
+
+		}
+
+		//death coming js
+		function dc_pic1() {
+			var a = document.getElementById("dc_pic")
+			a.src = "../image/death coming/dc1.jpg"
+		}
+
+		function dc_pic2() {
+			var a = document.getElementById("dc_pic")
+			a.src = "../image/death coming/dc2.jpg"
+		}
+
+		function dc_pic3() {
+			var a = document.getElementById("dc_pic")
+			a.src = "../image/death coming/dc3.jpg"
+		}
+
+		function dc_pic4() {
+			var a = document.getElementById("dc_pic")
+			a.src = "../image/death coming/dc4.jpg"
+		}
+		
+		//标签li颜色
+		
+		function leg_nav_li0(){
+			var a=document.getElementById("leg_nav_li0")
+			var b=document.getElementById("leg_nav_li1")
+			var c=document.getElementById("leg_nav_li2")
+			var d=document.getElementById("leg_nav_li3")
+			var e=document.getElementById("leg_nav_content1")
+			var f=document.getElementById("leg_nav_content2")
+			a.style.backgroundColor="#2a475e"
+			a.style.color="#FFFFFF"
+			b.style.background="none"
+			b.style.color="#4f94bc"
+			c.style.background="none"
+			c.style.color="#4f94bc"
+			d.style.background="none"
+			d.style.color="#4f94bc"
+			e.style.display="block"
+			f.style.display="none"
+			
+		}
+		function leg_nav_li1(){
+			var a=document.getElementById("leg_nav_li0")
+			var b=document.getElementById("leg_nav_li1")
+			var c=document.getElementById("leg_nav_li2")
+			var d=document.getElementById("leg_nav_li3")
+			var e=document.getElementById("leg_nav_content1")
+			var f=document.getElementById("leg_nav_content2")
+			b.style.backgroundColor="#2a475e"
+			b.style.color="#FFFFFF"
+			a.style.background="none"
+			a.style.color="#4f94bc"
+			c.style.background="none"
+			c.style.color="#4f94bc"
+			d.style.background="none"
+			d.style.color="#4f94bc"
+			e.style.display="none"
+			f.style.display="block"
+			
+		}
+		function leg_nav_li2(){
+			var a=document.getElementById("leg_nav_li0")
+			var b=document.getElementById("leg_nav_li1")
+			var c=document.getElementById("leg_nav_li2")
+			var d=document.getElementById("leg_nav_li3")
+			c.style.backgroundColor="#2a475e"
+			c.style.color="#FFFFFF"
+			b.style.background="none"
+			b.style.color="#4f94bc"
+			a.style.background="none"
+			a.style.color="#4f94bc"
+			d.style.background="none"
+			d.style.color="#4f94bc"
+			
+		}
+		
+		function leg_nav_li3(){
+			var a=document.getElementById("leg_nav_li0")
+			var b=document.getElementById("leg_nav_li1")
+			var c=document.getElementById("leg_nav_li2")
+			var d=document.getElementById("leg_nav_li3")
+			d.style.backgroundColor="#2a475e"
+			d.style.color="#FFFFFF"
+			b.style.background="none"
+			b.style.color="#4f94bc"
+			c.style.background="none"
+			c.style.color="#4f94bc"
+			a.style.background="none"
+			a.style.color="#4f94bc"
+			
+		}
+		
+		function leg_nav_colorshow0(){
+			var a=document.getElementById("leg_nav_li0")
+			a.style.color="#FFFFFF"
+			
+		}
+		
+		function leg_nav_colorhide0(){
+			var a=document.getElementById("leg_nav_li0")
+			a.style.color="#4f94bc"
+			
+		}
+		
+		function leg_nav_colorshow1(){
+			var a=document.getElementById("leg_nav_li1")
+			a.style.color="#FFFFFF"
+			
+		}
+		
+		function leg_nav_colorhide1(){
+			var a=document.getElementById("leg_nav_li1")
+			a.style.color="#4f94bc"
+			
+		}
+		
+		function leg_nav_colorshow2(){
+			var a=document.getElementById("leg_nav_li2")
+			a.style.color="#FFFFFF"
+			
+		}
+		
+		function leg_nav_colorhide2(){
+			var a=document.getElementById("leg_nav_li2")
+			a.style.color="#4f94bc"
+			
+		}
+		
+		function leg_nav_colorshow3(){
+			var a=document.getElementById("leg_nav_li3")
+			a.style.color="#FFFFFF"
+			
+		}
+		
+		function leg_nav_colorhide3(){
+			var a=document.getElementById("leg_nav_li3")
+			a.style.color="#4f94bc"
+			
+			
+		}
+		
+		window.onload=function (){
+			var a=document.getElementById("leg_nav_li0")
+			var b=document.getElementById("leg_nav_content1")
+			a.style.backgroundColor="#2a475e"
+			a.style.color="#FFFFFF"
+			b.style.display = "block"
+			
+		}
+		
+		function content_inhide1(){
+			var a=document.getElementById("leg_nav_content1_right")
+			var b=document.getElementById("leg_nav_content1_in")
+			
+			b.style.background="#29384b"
+		}
+		function content_inshow1(){
+			var a=document.getElementById("leg_nav_content1_right")
+			var b=document.getElementById("leg_nav_content1_in")
+			a.style.display="block"
+			b.style.background="#95bbd4"
+		}
+		
+		
+		function content_inhide2(){
+			var a=document.getElementById("leg_nav_content2_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content2_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow2(){
+			var a=document.getElementById("leg_nav_content2_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content2_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide3(){
+			var a=document.getElementById("leg_nav_content3_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content3_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow3(){
+			var a=document.getElementById("leg_nav_content3_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content3_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide4(){
+			var a=document.getElementById("leg_nav_content4_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content4_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow4(){
+			var a=document.getElementById("leg_nav_content4_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content4_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide5(){
+			var a=document.getElementById("leg_nav_content5_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content5_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow5(){
+			var a=document.getElementById("leg_nav_content5_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content5_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide6(){
+			var a=document.getElementById("leg_nav_content6_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content6_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow6(){
+			var a=document.getElementById("leg_nav_content6_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content6_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide7(){
+			var a=document.getElementById("leg_nav_content7_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content7_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow7(){
+			var a=document.getElementById("leg_nav_content7_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content7_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide8(){
+			var a=document.getElementById("leg_nav_content8_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content8_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow8(){
+			var a=document.getElementById("leg_nav_content8_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content8_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide9(){
+			var a=document.getElementById("leg_nav_content9_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content9_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow9(){
+			var a=document.getElementById("leg_nav_content9_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content9_in")
+			b.style.background="#95bbd4"
+		}
+		
+		
+		function content_inhide10(){
+			var a=document.getElementById("leg_nav_content10_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content10_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow10(){
+			var a=document.getElementById("leg_nav_content10_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content10_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide01(){
+			var a=document.getElementById("leg_nav_content01_right")
+			var b=document.getElementById("leg_nav_content01_in")
+			
+			b.style.background="#29384b"
+		}
+		function content_inshow01(){
+			var a=document.getElementById("leg_nav_content01_right")
+			var b=document.getElementById("leg_nav_content01_in")
+			a.style.display="block"
+			b.style.background="#95bbd4"
+		}
+		
+		
+		function content_inhide02(){
+			var a=document.getElementById("leg_nav_content02_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content02_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow02(){
+			var a=document.getElementById("leg_nav_content02_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content02_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide03(){
+			var a=document.getElementById("leg_nav_content03_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content03_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow03(){
+			var a=document.getElementById("leg_nav_content03_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content03_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide04(){
+			var a=document.getElementById("leg_nav_content04_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content04_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow04(){
+			var a=document.getElementById("leg_nav_content04_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content04_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide05(){
+			var a=document.getElementById("leg_nav_content05_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content05_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow05(){
+			var a=document.getElementById("leg_nav_content05_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content05_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide06(){
+			var a=document.getElementById("leg_nav_content06_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content06_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow06(){
+			var a=document.getElementById("leg_nav_content06_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content06_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide07(){
+			var a=document.getElementById("leg_nav_content07_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content07_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow07(){
+			var a=document.getElementById("leg_nav_content07_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content07_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide08(){
+			var a=document.getElementById("leg_nav_content08_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content08_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow08(){
+			var a=document.getElementById("leg_nav_content08_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content08_in")
+			b.style.background="#95bbd4"
+		}
+		
+		function content_inhide09(){
+			var a=document.getElementById("leg_nav_content09_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content09_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow09(){
+			var a=document.getElementById("leg_nav_content09_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content09_in")
+			b.style.background="#95bbd4"
+		}
+		
+		
+		function content_inhide010(){
+			var a=document.getElementById("leg_nav_content010_right")
+			a.style.display="none"
+			var b=document.getElementById("leg_nav_content010_in")
+			b.style.background="#29384b"
+		}
+		function content_inshow010(){
+			var a=document.getElementById("leg_nav_content010_right")
+			a.style.display="block"
+			var b=document.getElementById("leg_nav_content010_in")
+			b.style.background="#95bbd4"
+		}
+		
+		
+		
+		function shop_sho(){
+		var a=document.getElementById("top_sho")
+		a.style.display="block";	
+		
+	}
+	function shop_hid(){
+		var a=document.getElementById("top_sho")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho(){
+		var a=document.getElementById("top_socit")
+		a.style.display="block";	
+		
+	}
+		function socity_hid(){
+		var a=document.getElementById("top_socit")
+		a.style.display="none";	
+		
+	}
+	
+		
+	function shop_sho_a(){
+		var a=document.getElementById("top_sho_a")
+		a.style.display="block";	
+		
+	}
+	function shop_hid_a(){
+		var a=document.getElementById("top_sho_a")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho_a(){
+		var a=document.getElementById("top_socit_a")
+		a.style.display="block";	
+		
+	}
+		function socity_hid_a(){
+		var a=document.getElementById("top_socit_a")
+		a.style.display="none";	
+		
+	}
+	
+		
+	
+	function shop_sho_b(){
+		var a=document.getElementById("top_sho_b")
+		a.style.display="block";	
+		
+	}
+	function shop_hid_b(){
+		var a=document.getElementById("top_sho_b")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho_b(){
+		var a=document.getElementById("top_socit_b")
+		a.style.display="block";	
+		
+	}
+		function socity_hid_b(){
+		var a=document.getElementById("top_socit_b")
+		a.style.display="none";	
+		
+	}
+	
+		
+	
+	function shop_sho_c(){
+		var a=document.getElementById("top_sho_c")
+		a.style.display="block";	
+		
+	}
+	function shop_hid_c(){
+		var a=document.getElementById("top_sho_c")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho_c(){
+		var a=document.getElementById("top_socit_c")
+		a.style.display="block";	
+		
+	}
+		function socity_hid_c(){
+		var a=document.getElementById("top_socit_c")
+		a.style.display="none";	
+		
+	}
+	
+		
+	
+	function shop_sho_d(){
+		var a=document.getElementById("top_sho_d")
+		a.style.display="block";	
+		
+	}
+	function shop_hid_d(){
+		var a=document.getElementById("top_sho_d")
+		a.style.display="none";	
+		
+	}
+	
+	
+		function socity_sho_d(){
+		var a=document.getElementById("top_socit_d")
+		a.style.display="block";	
+		
+	}
+		function socity_hid_d(){
+		var a=document.getElementById("top_socit_d")
+		a.style.display="none";	
+		
+	}
+	</script>
+
+</html>
